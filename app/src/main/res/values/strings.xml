@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">یادداشت های من</string>
+    <string name="enter_note">یادداشتت را اینجا بنویس</string>
+    <string name="ok">تایید</string>
+    <string name="note_not_be_empty">یادداشت نباید خالی باشد</string>
+    <string name="cancel">انصراف</string>
+    <string name="add_new_note">ثبت یادداشت جدید</string>
+    <string name="edit_note">ویرایش یادداشت</string>
+    <string name="empty_note">شما هنوز یادداشتی ثبت نکرده اید</string>
+    <string name="about_us">درباره</string>
+    <string name="about_app">یادداشت های من یک اپلیکیشن متن باز تحت لایسنس آپاچی برای مدیریت کار های روزانه شما است که در قالب یک پروژه تمرینی تعطیلات تابستان آن را توسعه داده ام و سورس آن بر روی گیت هاب و گیت لب موجود است و می توانید به صورت رایگان از آن استفاده کنید.</string>
+    <string name="application_github">سورس گیتهاب</string>
+    <string name="send_fedback">ارسال بازخورد اپلیکیشن</string>
+    <string name="developer_weblog">وبلاگ توسعه دهنده</string>
+    <string name="designed_developed_by">DESIGNED AND DEVELOPED BY</string>
+    <string name="developer_name">Baset Esmaeili</string>
+    <string name="version">نسخه:</string>
+
+
+</resources>
