@@ -94,4 +94,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.delete(Note.TABLE_NAME,Note.COLUMN_ID+" = ? ",new String[]{String.valueOf(note.getId())});
         db.close();;
     }
+
+    public void deletAll() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(Note.TABLE_NAME, null, null);
+    }
 }

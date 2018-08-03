@@ -49,10 +49,31 @@ private TextView tvAppVersion;
 switch (id){
     case R.id.about_github_source:
         viewGithub();
+        break;
+    case R.id.about_developer_website:
+        viewWeblog();
+        break;
+    case R.id.about_send_feedback:
+        sendFeedback();
+        break;
 }
     }
 
+    private void sendFeedback() {
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"baset.esmaili0@gmail.com"});
+        email.setType("message/rfc822");
+        startActivity(Intent.createChooser(email, "Choose an Email client :"));
+    }
+
+    private void viewWeblog() {
+        Intent weblog = new Intent(Intent.ACTION_VIEW, Uri.parse("https://basetesmaeili.blogspot.com/"));
+        startActivity(weblog);
+
+    }
+
     private void viewGithub() {
-        //Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse())
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/BasetEsmaeili/MyNotes"));
+        startActivity(intent);
     }
 }

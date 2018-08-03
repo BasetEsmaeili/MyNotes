@@ -1,6 +1,7 @@
 package com.baset.mynotes;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -13,6 +14,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -155,5 +157,21 @@ showDialog(note,position);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.option_menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.about_us:
+                startActivity(new Intent(getBaseContext(), ActivityAbout.class));
+                break;
+            case R.id.clear_all_notes:
+                databaseHelper.deletAll();
+                adapterNotes.notifyDataSetChanged();
+                checkEmptyView();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
