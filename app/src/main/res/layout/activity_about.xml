@@ -12,6 +12,7 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            android:background="@drawable/bg_toolbar"
             android:layout_height="wrap_content"
             app:subtitleTextColor="@android:color/white"
             app:titleTextColor="@android:color/white" />
